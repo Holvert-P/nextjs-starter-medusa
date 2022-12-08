@@ -25,7 +25,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
       <div className="uppercase text-large-semi mb-1">#{order.display_id}</div>
       <div className="flex items-center divide-x divide-gray-200 text-small-regular text-gray-700">
         <span className="pr-2">
-          {new Date(order.created_at).toDateString()}
+          {new Date(order.created_at).toLocaleDateString()}
         </span>
         <span className="px-2">
           {formatAmount({
@@ -35,7 +35,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
           })}
         </span>
         <span className="pl-2">{`${numberOfLines} ${
-          numberOfLines > 1 ? "items" : "item"
+          numberOfLines > 1 ? "artículos" : "artículo"
         }`}</span>
       </div>
       <div className="grid grid-cols-2 small:grid-cols-4 gap-4 my-4">
@@ -60,14 +60,14 @@ const OrderCard = ({ order }: OrderCardProps) => {
             <span className="text-small-regular text-gray-700">
               + {numberOfLines - 4}
             </span>
-            <span className="text-small-regular text-gray-700">more</span>
+            <span className="text-small-regular text-gray-700">más</span>
           </div>
         )}
       </div>
       <div className="flex justify-end">
         <Link href={`/order/details/${order.id}`}>
           <a>
-            <Button variant="secondary">See details</Button>
+            <Button variant="secondary">Ver detalles</Button>
           </a>
         </Link>
       </div>

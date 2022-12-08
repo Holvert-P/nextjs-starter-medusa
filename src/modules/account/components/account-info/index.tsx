@@ -22,7 +22,7 @@ const AccountInfo = ({
   isSuccess,
   isError,
   clearState,
-  errorMessage = "An error occurred, please try again",
+  errorMessage = "Ha ocurrido un error. Por favor intente de nuevo",
   children,
 }: AccountInfoProps) => {
   const { state, close, toggle } = useToggleState()
@@ -58,7 +58,7 @@ const AccountInfo = ({
             onClick={handleToggle}
             type={state ? "reset" : "button"}
           >
-            {state ? "Cancel" : "Edit"}
+            {state ? "Cancelar" : "Editar"}
           </Button>
         </div>
       </div>
@@ -76,7 +76,7 @@ const AccountInfo = ({
           )}
         >
           <div className="bg-green-100 text-green-500 p-4 my-4">
-            <span>{label} updated succesfully</span>
+            <span>{label} Actualizado con éxito</span>
           </div>
         </Disclosure.Panel>
       </Disclosure>
@@ -118,7 +118,7 @@ const AccountInfo = ({
                 className="w-full small:max-w-[140px]"
                 type="submit"
               >
-                Save changes
+                Guardar cambios
               </Button>
             </div>
           </div>

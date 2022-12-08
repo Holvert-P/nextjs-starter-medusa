@@ -10,13 +10,13 @@ type LoginDetailsProps = {
 
 const LoginDetails: React.FC<LoginDetailsProps> = ({ customer }) => {
   return (
-    <Detail title="Login">
+    <Detail title="Acceso">
       <div className="flex flex-col gap-y-4">
-        <Detail.SubDetail title="Email">
+        <Detail.SubDetail title="Correo electrónico">
           <span>{customer.email}</span>
           <EditEmailModal customer={customer} />
         </Detail.SubDetail>
-        <Detail.SubDetail title="Password">
+        <Detail.SubDetail title="Contraseña">
           <span>•••••••••••</span>
           <EditPasswordModal customer={customer} />
         </Detail.SubDetail>

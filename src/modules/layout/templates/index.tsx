@@ -12,4 +12,17 @@ const Layout: React.FC = ({ children }) => {
   )
 }
 
+// fix problem
+// type LayoutProps = {
+//   children: React.ReactNode
+// }
+// const Layout = (props: LayoutProps) => {
+//   return (
+//     <div>
+//       <Nav />
+//       <main className="relative">{props.children}</main>
+//       <Footer />
+//     </div>
+//   )
+// }
 export default Layout

@@ -9,8 +9,8 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head
-        title="Home"
-        description="Shop all available models only at the ACME. Worldwide Shipping. Secure Payment."
+        title="Inicio"
+        description="Compre todos nuestros productos disponibles solo en Mia Secret. Envío a toda Nicaragua. Pago seguro."
       />
       <Hero />
       <FeaturedProducts />

@@ -5,9 +5,9 @@ class MyDocument extends Document {
   render() {
     const uri = MEDUSA_BACKEND_URL
     const { hostname } = new URL(uri)
-
+    console.log(hostname)
     return (
-      <Html lang="en">
+      <Html lang="es">
         <Head>
           <link rel="preconnect" href={`//${hostname}`} crossOrigin="true" />
           <link rel="dns-prefetch" href={`//${hostname}`} />

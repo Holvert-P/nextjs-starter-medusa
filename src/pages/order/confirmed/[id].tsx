@@ -43,10 +43,7 @@ const Confirmed: NextPageWithLayout = () => {
   if (isSuccess) {
     return (
       <>
-        <Head
-          title="Order Confirmed"
-          description="You purchase was successful"
-        />
+        <Head title="Pedido confirmado" description="Tu compra fue exitosa" />
 
         <OrderCompletedTemplate order={data} />
       </>

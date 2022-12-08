@@ -86,7 +86,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
       })
       .catch(() => {
         setSubmitting(false)
-        setError("Failed to update address, please try again.")
+        setError("No se pudo actualizar la dirección, intente nuevamente.")
       })
   })
 
@@ -135,72 +135,72 @@ const EditAddress: React.FC<EditAddressProps> = ({
             onClick={open}
           >
             <Edit size={16} />
-            Edit
+            Editar
           </button>
           <button
             className="text-small-regular text-gray-700 flex items-center gap-x-2"
             onClick={removeAddress}
           >
             <Trash />
-            Remove
+            Eliminar
           </button>
         </div>
       </div>
 
       <Modal isOpen={state} close={close}>
-        <Modal.Title>Edit address</Modal.Title>
+        <Modal.Title>Editar dirección</Modal.Title>
         <Modal.Body>
           <div className="grid grid-cols-1 gap-y-2">
             <div className="grid grid-cols-2 gap-x-2">
               <Input
-                label="First name"
+                label="Name"
                 {...register("first_name", {
-                  required: "First name is required",
+                  required: "Nombre requerido",
                 })}
                 required
                 errors={errors}
                 autoComplete="given-name"
               />
               <Input
-                label="Last name"
+                label="Apellido"
                 {...register("last_name", {
-                  required: "Last name is required",
+                  required: "Apellido requerido",
                 })}
                 required
                 errors={errors}
                 autoComplete="family-name"
               />
             </div>
-            <Input label="Company" {...register("company")} errors={errors} />
+            <Input label="Compañia" {...register("company")} errors={errors} />
             <Input
               label="Address"
               {...register("address_1", {
-                required: "Address is required",
+                required: "Dirección requerida",
               })}
               required
               errors={errors}
               autoComplete="address-line1"
             />
             <Input
-              label="Apartment, suite, etc."
+              label="Apartmento, suite, etc."
               {...register("address_2")}
               errors={errors}
               autoComplete="address-line2"
             />
             <div className="grid grid-cols-[144px_1fr] gap-x-2">
               <Input
-                label="Postal code"
+                label="Código postal"
                 {...register("postal_code", {
-                  required: "Postal code is required",
+                  required: "Código postal requerido",
                 })}
                 required
                 errors={errors}
                 autoComplete="postal-code"
               />
               <Input
-                label="City"
+                label="Ciudad"
                 {...register("city", {
-                  required: "City is required",
+                  required: "Ciudad requerida",
                 })}
                 errors={errors}
                 required
@@ -208,7 +208,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               />
             </div>
             <Input
-              label="Province / State"
+              label="Municipio"
               {...register("province")}
               errors={errors}
               autoComplete="address-level1"
@@ -218,7 +218,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               autoComplete="country"
             />
             <Input
-              label="Phone"
+              label="Teléfono"
               {...register("phone")}
               errors={errors}
               autoComplete="phone"
@@ -230,10 +230,10 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={close}>
-            Cancel
+            Cancelar
           </Button>
           <Button onClick={submit} disabled={submitting}>
-            Save
+            Guardar
             {submitting && <Spinner />}
           </Button>
         </Modal.Footer>

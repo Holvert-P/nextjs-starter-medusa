@@ -18,7 +18,7 @@ const Login = () => {
   const router = useRouter()
 
   const handleError = (_e: Error) => {
-    setAuthError("Invalid email or password")
+    setAuthError("Correo electrónico o contraseña no válidos")
   }
 
   const {
@@ -39,21 +39,21 @@ const Login = () => {
 
   return (
     <div className="max-w-sm w-full flex flex-col items-center">
-      <h1 className="text-large-semi uppercase mb-6">Welcome back</h1>
+      <h1 className="text-large-semi uppercase mb-6">Bienvenido de nuevo</h1>
       <p className="text-center text-base-regular text-gray-700 mb-8">
-        Sign in to access an enhanced shopping experience.
+        Inicie sesión para acceder a una experiencia de compra mejorada.
       </p>
       <form className="w-full" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="Email"
-            {...register("email", { required: "Email is required" })}
+            label="Correo electrónico"
+            {...register("email", { required: "Correo electrónico requerido" })}
             autoComplete="email"
             errors={errors}
           />
           <Input
-            label="Password"
-            {...register("password", { required: "Password is required" })}
+            label="Contraseña"
+            {...register("password", { required: "Contraseña requerida" })}
             type="password"
             autoComplete="current-password"
             errors={errors}
@@ -62,19 +62,19 @@ const Login = () => {
         {authError && (
           <div>
             <span className="text-rose-500 w-full text-small-regular">
-              These credentials do not match our records
+              Estas credenciales no coinciden con nuestros registros
             </span>
           </div>
         )}
-        <Button className="mt-6">Enter</Button>
+        <Button className="mt-6">Ingresar</Button>
       </form>
       <span className="text-center text-gray-700 text-small-regular mt-6">
-        Not a member?{" "}
+        ¿No es un miembro?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
           className="underline"
         >
-          Join us
+          Únete a nosotros
         </button>
         .
       </span>

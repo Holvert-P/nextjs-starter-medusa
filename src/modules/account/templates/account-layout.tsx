@@ -4,7 +4,10 @@ import Spinner from "@modules/common/icons/spinner"
 import React, { useEffect } from "react"
 import AccountNav from "../components/account-nav"
 
-const AccountLayout: React.FC = ({ children }) => {
+type AccountLayoutProps = {
+  children: React.ReactNode
+}
+const AccountLayout: React.FC<AccountLayoutProps> = ({ children }) => {
   const { customer, retrievingCustomer, checkSession } = useAccount()
 
   useEffect(() => {
@@ -30,15 +33,15 @@ const AccountLayout: React.FC = ({ children }) => {
         </div>
         <div className="flex flex-col small:flex-row items-end justify-between small:border-t border-gray-200 px-8 py-12 gap-x-8">
           <div>
-            <h3 className="text-xl-semi mb-4">Got questions?</h3>
+            <h3 className="text-xl-semi mb-4">¿Tienes preguntas?</h3>
             <span className="text-small-regular">
-              You can find frequently asked questions and answers on our
-              customer service page.
+              Puede encontrar las preguntas y respuestas más frecuentes en
+              nuestro página de servicio al cliente.
             </span>
           </div>
           <div>
             <UnderlineLink href="/customer-service">
-              Customer Service
+              Servicio al cliente
             </UnderlineLink>
           </div>
         </div>

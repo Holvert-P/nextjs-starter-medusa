@@ -14,16 +14,16 @@ type PaymentContainerProps = {
 
 const PaymentInfoMap: Record<string, { title: string; description: string }> = {
   stripe: {
-    title: "Credit card",
-    description: "Secure payment with credit card",
+    title: "Tarjeta de crédito",
+    description: "Pago seguro con tarjeta de crédito",
   },
   paypal: {
     title: "PayPal",
-    description: "Secure payment with PayPal",
+    description: "Pago seguro con PayPal",
   },
   manual: {
     title: "Test payment",
-    description: "Test payment using medusa-payment-manual",
+    description: "Prueba de pago usando medusa-pago-manual",
   },
 }
 
