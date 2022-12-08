@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <div className="max-w-sm flex flex-col items-center mt-12">
       <h1 className="text-large-semi uppercase mb-6">
-        Conviértete en miembro de Mia Secret
+        Conviértete en miembro de Mia Secret Nicaragua
       </h1>
       <p className="text-center text-base-regular text-gray-700 mb-4">
         Cree su perfil de miembro de Mia Secret y obtenga acceso a una compra
