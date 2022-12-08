@@ -29,7 +29,7 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
     }
 
     if (product.type) {
-      params.type = product.type.id
+      params.type_id = [product.type.id]
     }
 
     if (product.tags) {
